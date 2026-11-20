@@ -3,295 +3,229 @@
 
 
 /*variablesd e marca es decir las generales*/
-:root {/* es la raiz del documentolas las variables declaradas aqui sirben para toda la pagina*/
-
-    --sena-verde:#0dff00e8;/* toda variabler inicia -- el texto esta en hexadecimal pero puede colocarlol en texto*/
-    --sena-verde-oscuro:#034528;
-    --sena-azul:#007bff ;
-    --sidebar-ancho:250px 
-
+:root {
+    /* Es la raíz del documento. Las variables declaradas aquí sirven para toda la página */
+    --sena-verde: #0dff00e8; /* Toda variable inicia con --. El color está en hexadecimal */
+    --sena-verde-oscuro: #034528;
+    --sena-azul: #007bff;
+    --sidebar-ancho: 250px;
 } 
-/*variables generales estilos que aplican todas la paginas*/ 
-body {/*afecta todo el cuerpo de la pagina*/
-    margin:0;/*quta la margen que el navegador coloca en el navegador  por defecto*/
-    font-family: "segoe ui",roboto, arial,
-    sans-serif;/*tipos de letra sino existe pasa ala siguiente*/
 
+/* Variables generales: estilos que aplican a todas las páginas */ 
+body {
+    /* Afecta todo el cuerpo de la página */
+    margin: 0; /* Quita el margen que el navegador coloca por defecto */
+    font-family: "Segoe UI", Roboto, Arial, sans-serif; /* Tipos de letra; si no existe, pasa a la siguiente */
+}
 
+/* Texto verde SENA */
+.texto-sena {
+    color: var(--sena-verde);
 }
-    /*textoverde sena*/
-    .texto-sena{
-    color:var(--sena-verde);
 
-   }
-   .btn-sena {
-    --bs-btn-color:#fff;
-    /*color del texto*/
-    --bs-btn-bg:var(--sena-verde);
-    /*color de fondo*/
-    --bs-btn-border-color:var(--sena-verde);
-    /*color de borde*/
-    --bs-hover-color:#fff;
-    /*texto del mouse arriba*/
-    --bs-btn-hover-bg:var(--sena-verde-oscuro);
-    /*fondo con el mouse encima*/
-    --bs-btn---border-color:var(--sena-verde-oscuro);
-    /*borde con el mouse encima*/
-    --bs--btn--active-color:#fff;
-    /*texto mientra hace clic*/
-    --bs-btn-active-bg:var(--sena-verde-oscuro);
-    /*fondo mientras hace clic*/
-    --bs-btn-active-border-color:var(--sena-verde-oscuro);
-    /*borde mientras hace clic*/
-    
+.btn-sena {
+    --bs-btn-color: #fff; /* Color del texto */
+    --bs-btn-bg: var(--sena-verde); /* Color de fondo */
+    --bs-btn-border-color: var(--sena-verde); /* Color de borde */
+    --bs-hover-color: #fff; /* Texto con el mouse arriba */
+    --bs-btn-hover-bg: var(--sena-verde-oscuro); /* Fondo con el mouse encima */
+    --bs-btn-border-color: var(--sena-verde-oscuro); /* Borde con el mouse encima */
+    --bs-btn-active-color: #fff; /* Texto mientras hace clic */
+    --bs-btn-active-bg: var(--sena-verde-oscuro); /* Fondo mientras hace clic */
+    --bs-btn-active-border-color: var(--sena-verde-oscuro); /* Borde mientras hace clic */
 }
-   /*la coma aplica la misma regla a varios  selectores:
-   llols campos  con el foco*/
-   .form-control:focus,
-   /*las listas desplegadas con foco*/
-   .form-select:focus,
-   /*las casillas con foco */
-   .form-check-input:focus{
-    /*borde verde en lugar de azul de boootstrap*/
-    border-color:var(--sena-verde);
-    /*lado verde translucido al rededor del campo*/
-    box-shadow: 0 0 0. 25rem rgba(57, 169, 0, .25);
-    /*cierre de la linea*/
-}
-/*casilla  o interruptor marcado*/
-.form-check-input:checked {
-    /*relleno de verde*/
-    background-color: var(--sena-verde);
-    /*borde verde*/
+
+/* La coma aplica la misma regla a varios selectores: los campos con el foco */
+.form-control:focus,
+/* Las listas desplegables con foco */
+.form-select:focus,
+/* Las casillas con foco */
+.form-check-input:focus {
+    /* Borde verde en lugar del azul de Bootstrap */
     border-color: var(--sena-verde);
-    /*cierra la regla*/
+    /* Halo verde translúcido alrededor del campo */
+    box-shadow: 0 0 0.25rem rgba(57, 169, 0, 0.25);
 }
-/*login y registro*/
-/* fondo de pantalla*/
-.login-fondo {
-    /*alto minimo de toda la pantalla*/
-    min-height: 100vh;
-    /*flexboots*/
-    display: flex;
-    /*centrado vertical*/
-    align-items: center;
-    justify-content: center;
-    /*relleno de celular*/
-    padding: 1rem;
-    /* padding no suma al alto*/
-    box-sizing:  border-box;
-    /*degradado azul*/
-    background: linear-gradient(135deg, var(--sena-azul), var(--sena-verde));
-    /*cierra la regla*/
-}
-/*targeta blanca*/
-.login-card {
-    /*ancho completo*/
-    width: 100%;
-    /*hasta 420px*/
-    max-width: 420px;
-    /*fondo blanco*/
-    background-color: #ffff;
-    /*esquinas redondeadas*/
-    border-radius: 1rem;
-    /*relleno interno*/
-    padding: 2.5rem 2rem;
-    /*el ancho uncluye el relleno*/
-    box-sizing: border-box;
-    /*sombra*/
-    box-shadow: 0 1rem 3rem rgba(0,
-    0, .25); 
-    
-    /*ciere de regla*/ 
-}
-/*dos clases pegadas(sin espacio) = 
-elementos que tienen ambas clases
-la usara el registro que tiene los 
-campos*/
-.login-car.ancha{
-    /*tarjeta  mas ancha*/
-    max-width: 680px;
-    /*cierre de regla*/
-}
-/*encabezado de la tarjeta*/
-.login-encabezado {
-    /*centrado*/
-    text-align:  center;
-    /*espacio interior*/
-    margin-bottom: 1.5rem;
-    /*cierre de regla*/
-}
-/*titulo dentro del encabezado*/
-.login-encabezado h1{
-    /*azulk sena*/
-    color: var(--sena-azul);
-    /*margen pequño*/
-    margin: .25rem 0;
-/*cierre de regla*/
 
+/* Casilla o interruptor marcado */
+.form-check-input:checked {
+    /* Relleno verde */
+    background-color: var(--sena-verde);
+    /* Borde verde */
+    border-color: var(--sena-verde);
 }
-/*textos pqeuños abajo*/
+
+/* LOGIN Y REGISTRO */
+/* Fondo de pantalla */
+.login-fondo {
+    min-height: 100vh; /* Alto mínimo de toda la pantalla */
+    display: flex; /* Flexbox */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    padding: 1rem; /* Relleno para móviles */
+    box-sizing: border-box; /* Padding no suma al alto total */
+    background: linear-gradient(135deg, var(--sena-azul), var(--sena-verde));
+}
+
+/* Tarjeta blanca */
+.login-card {
+    width: 100%; /* Ancho completo */
+    max-width: 420px; /* Máximo 420px */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 1rem; /* Esquinas redondeadas */
+    padding: 2.5rem 2rem; /* Relleno interno */
+    box-sizing: border-box;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25); /* Sombra */
+}
+
+/* Dos clases pegadas (sin espacio) = elementos que tienen ambas clases */
+.login-card.ancha {
+    max-width: 680px; /* Tarjeta más ancha para registros */
+}
+
+/* Encabezado de la tarjeta */
+.login-encabezado {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Título dentro del encabezado */
+.login-encabezado h1 {
+    color: var(--sena-azul); /* Azul SENA */
+    margin: 0.25rem 0;
+}
+
+/* Textos pequeños abajo */
 .login-pie {
     text-align: center;
-    /*centrados*/
-    font-size: .875rem;
-    /*gris*/
-    color: #000000;;
-    /*margen superior*/
+    font-size: 0.875rem;
+    color: #6c757d; /* Gris profesional */
     margin: 1.25rem 0 0;
-    /*cierre de regla*/
 }
-/*panel menu lateral*/
-/*clase <aside> del menu lateral*/
-.sidedar {
-    /*fondo azul sena !important
-    porque las pantallas grandes bootsatrap pobe offcanvas.lg-con fondo transparente
-    usando important y solomm podemos priorisarlo */
-    background-color: var(--sena-azul) 
-    !important;
-    /*texto blanco dentro del menu*/
-    color: #e80808;
-    /*cierre de regla*/
-}
-/*enlases del menu lateral*/
-.sidedar .nav-link {
-    /*blanco al 75% los enlaces no activos se ven un poco apagados*/
-    color: rgba(250, 2, 2, 0.75);
-        /*esqunas redondeadas*/
-        border-radius: .5rem;
-        /*seoaracion entre enlaces*/
-        margin-bottom: .25rem;
-        /*cierre de regla*/
 
-}
-/*enlace con el mouse encima*/
-.sidedar .nav-link:hover {
-    /*texto blaco */
+/* PANEL MENÚ LATERAL (Sidebar corregido) */
+.sidebar {
+    background-color: var(--sena-azul) !important;
     color: #fff;
-    /* texto blanco al 10% un resalte sutil*/
-    background-color: rgba(255, 255, 255, 0.1);
-    /*cierre de regla*/
-}
-/*enlace de la pagina actual (tiene las dos clases: nav-link y active*/
-.sidedar .nav-link.active {
-    /*texto blanco*/
-    color: #cbb6b6;
-    /*fondo verde sena el usuario save en que modulo esta*/
-    background-color:  var(--sena-verde);
-    /*cierre de regla*/
 }
 
-/*las reglas siguientes solo a aplican en pantallas de 992px o mas de breakpoint de bootsatrap*/
-@media (min-width:992px){
-    /*menu lateral de el computador*/
-    .sidedar{
-        /* queda fijo mouse mueve al desplazar la pagina*/
+/* Enlaces del menú lateral */
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.75); /* Blanco al 75%, enlaces no activos se ven un poco apagados */
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Enlace con el mouse encima */
+.sidebar .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); /* Resalte sutil */
+}
+
+/* Enlace de la página actual (tiene clases nav-link y active) */
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: var(--sena-verde); /* Fondo verde SENA para indicar dónde está el usuario */
+}
+
+/* Las reglas siguientes solo aplican en pantallas de 992px o más (Breakpoint de Bootstrap) */
+@media (min-width: 992px) {
+    /* Menú lateral de computadora */
+    .sidebar {
         position: fixed;
-        /*pegado arriba*/
-        top:0;
-        /* y abajo ocupa todo el alto*/
-        bottom:0;
-        /*pegado ala izquierda*/
-        left:0;
-        /*anchotomado de la variable (250px)*/
-        width:var(--sidebar-ancho);
-
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: var(--sidebar-ancho);
     }
-    /*cuerpo del menu computador*/
-    .sidedar .offcanvas-body {
-        /*ocupa todo el alto del boton cierra secion queda al fondo*/
+    
+    /* Cuerpo del menú en computadora */
+    .sidebar .offcanvas-body {
         height: 100%;
-        /*el menu muy largo aparece la varra de deslizamiento
-        overflow-y:auto*/
+        overflow-y: auto; /* Barra de deslizamiento si el menú es muy largo */
     }
-    /* contenedor de la barra superior + contenido*/
+    
+    /* Contenedor principal de la página */
     .contenido {
-        /*se corre ala derecha el ancho del menu para q no quede debajo de el */
-        margin-left: var(--sidebar-ancho);
+        margin-left: var(--sidebar-ancho); /* Se corre a la derecha para que no quede debajo del menú */
     }
-    /*cierre de la funcion @media*/
 }
-/* trajetas de lo indicadores*/
-/*tarjetas de los numeros del dashboard
-(kpi indicador clave)*/
+
+/* TARJETAS DE INDICADORES (KPIs) */
 .tarjetas-kpi {
-    /*sin borde general*/
     border: 0;
-    /*excepto un franja verde de la izquierda*/
-    border-left: 4px solid var(var(--sena-verde));
-    /* anima el movimiento y la sombra en 0.2 segundos*/
-    transition: transform .2s, box-shadow .2s;
+    border-left: 4px solid var(--sena-verde); /* Franja verde a la izquierda */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
-/*trajeta con el mouse encima*/
+
+/* Tarjeta con el mouse encima */
 .tarjetas-kpi:hover {
-    /*sube 4px efecto de levantarse*/
-    transition:  traslatey(-4px);
-    /*sombra mas marcada (!important) para vganatle al shadow-sm*/
-    box-shadow:  0 .5rem rgba(0, 0, 0, .12) !important;
+    transform: translateY(-4px); /* Sube 4px con efecto de levantarse */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.12) !important;
 }
-/*cuadro de color que contiene el icono de la tarajeta*/
+
+/* Cuadro de color que contiene el icono de la tarjeta */
 .icono-kpi {
     width: 52px;
     height: 52px;
-    /*flexbox para centrar el icono*/
     display: flex;
-    align-items:  center;
-    justify-content:center;
-    border-radius: .75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
     font-size: 1.5rem;
 }
-/*modulos de gestion*/
-/*circullo de la inicia les del usuario*/
+
+/* MÓDULOS DE GESTIÓN */
+/* Círculo de las iniciales del usuario (Avatar) */
 .avatar {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    /*flebox en linea  para centrar las lineas*/
     display: inline-flex;
     justify-content: center;
-    /*letras seminegras*/
+    align-items: center;
     font-weight: 600;
-    font-size: 85rem;
-    /*evita que el circulo aplaste se aplaste falta de espacio*/
+    font-size: 0.85rem; /* Corregido de 85rem a 0.85rem */
     flex-shrink: 0;
 }
-/*personalizamos la paginacion de bootsatrap con su variables*/
-/*color del lol s nuneros*/
+
+/* Personalizamos la paginación de Bootstrap con sus variables */
 .pagination {
     --bs-pagination-color: var(--sena-azul);
-    /*fondo de pagina activa*/
     --bs-pagination-active-bg: var(--sena-verde);
-    /*borde de pagina activa*/
     --bs-pagination-active-border-color: var(--sena-verde);
 }
-/** tarjeta punteada  que evita crear una categoria nueva*/
+
+/* Tarjeta punteada que evita crear una categoría nueva */
 .tarjeta-agregar {
     border: 2px dashed #0080ff;
     color: #6c757d;
     min-height: 200px;
-    /*anima los campos  de color*/
-    transition: border-color .2s,color .2s;
+    transition: border-color 0.2s, color 0.2s;
 }
-/* al pasar el mouse*/
+
+/* Al pasar el mouse */
 .tarjeta-agregar:hover {
     border-color: var(--sena-verde);
     color: var(--sena-verde);
 }
-/*cuadro donde ira la foto de color*/
+
+/* Cuadro donde irá la foto o miniatura */
 .minialtura {
     width: 48px;
     height: 48px;
     display: flex;
     align-items: center;
-    border-radius: .5rem;
+    justify-content: center;
+    border-radius: 0.5rem;
     background-color: #eef2f5;
     color: var(--sena-azul);
     font-size: 1.4rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Evita que se achique si el texto es muy largo */
 }
-/*lista de categorias del a clase */
-.list-group{
-    /*fondo item activo*/
-    --bs-list-group-active-bg: var(var(--sena-verde));
-    --bs-list-group-active-border-color: var(var(var(--sena-verde)))
+
+/* Lista de categorías */
+.list-group {
+    --bs-list-group-active-bg: var(--sena-verde);
+    --bs-list-group-active-border-color: var(--sena-verde);
 }

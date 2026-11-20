@@ -1,7 +1,7 @@
-#  proyecto de html5, css3, bootstrap 5
+#  proyecto de html5, css, bootstrap 5
 este proyecto e s una plantilla de gesetion de inverntarios para un abminitrador
 contiene:
--INICIO DE SECION
+-INICIO DE SESION
 -dashboar
 - gestion de usuarios
 - gestion de categoria
@@ -13,4 +13,4 @@ contiene:
 1 html: estruptura del login.
 -1.1 crear la estruptura del sofware
 -1.2 creamos elm index.html que contiene el loing
-- 2 iniciamos con css que permite realizar los estilos personalisados de la pagina con variables de marca,renerale
+- 2 iniciamos con css que permite realizar los estilos personalisados de la pagina con variables de marca,reneral
